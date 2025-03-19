@@ -6,7 +6,7 @@ import ProfilePic from "../assets/profile.png";
 
 const NavBarSection = () => {
   return (
-    <div className="w-[20%] bg-gray-400 h-full rounded-l-3xl py-10 my-5 ">
+    <div className="w-[20%] bg-gray-400 h-full rounded-l-3xl py-10 my-5 hidden lg:block">
       <div className="flex justify-center items-center">
         <img src={logo} alt="logo" className="w-16 h-16" />
         <p className="text-2xl font-black text-white">TaskSprint</p>

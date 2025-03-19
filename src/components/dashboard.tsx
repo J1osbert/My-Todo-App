@@ -38,7 +38,8 @@ const DashboardSection = () => {
     }
   ];
   return (
-    <div className="w-full bg-amber-50 rounded-3xl h-full py-10 overflow-y-auto">
+    <div className="max-w-full bg-amber-50 rounded-3xl h-full py-10 overflow-y-auto">
+      <EllipsisVertical className="lg:hidden block" />
       <div className="  top-0 w-[90%]  mx-auto rounded-3xl flex lg:flex-row flex-col lg:items-center items-start gap-x-10 justify-between gap-y-3">
         <div className="flex justify-center items-center gap-x-2">
           <p>Overview</p>
@@ -71,16 +72,18 @@ const DashboardSection = () => {
           </button>
         </div>
       </div>
-      <div className="flex lg:flex-row flex-col w-full justify-between gap-x-5 px-10 my-20 items-center">
-        <div className=" w-[40%] text-start space-y-5 ">
-          <p className="text-4xl font-black">Manage your training folders</p>
-          <p className="text-gray-600 text-2xl font-medium">
+      <div className="grid lg:grid-cols-[1fr_2fr]  w-full justify-between gap-5 lg:px-10 px-2 my-10 items-center">
+        <div className=" w-full text-start lg:space-y-5  ">
+          <p className="lg:text-4xl text-2xl font-black">
+            Manage your training folders
+          </p>
+          <p className="text-gray-600 lg:text-2xl text-lg font-medium">
             Create folders to sort files and have quick access to your routines
           </p>
         </div>
-        <div className="w-full">
+        <div className="w-full  space-y-5 ">
           <TaskTracker />
-          <div className="w-full h-[300px] grid lg:grid-cols-3 grid-cols-1 gap-x-10 ">
+          <div className="w-full  grid lg:grid-cols-3 grid-rows-1 lg:gap-10 gap-3 ">
             {cardData.map((item) => (
               <div
                 className="w-full   rounded-4xl p-5"
@@ -110,11 +113,11 @@ const DashboardSection = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-[1fr_2fr] gap-5 px-10 ">
+      <div className="grid lg:grid-cols-[1fr_2fr] grid-rows-2 gap-5 lg:px-10 px-2 ">
         <div>
           <CardComponent />
         </div>
-        <div className="w-full bg-amber-500 rounded-2xl"></div>
+        <div className="w-full  bg-amber-500 rounded-2xl"></div>
       </div>
     </div>
   );

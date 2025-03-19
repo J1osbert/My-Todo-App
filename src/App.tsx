@@ -23,7 +23,7 @@ import NavBarSection from "./components/navbar";
 
 function App() {
   return (
-    <div className="flex bg-gray-200 max-w-full">
+    <div className="flex max-w-full">
       <NavBarSection />
       <div className="flex-1  p-5">
         <DashboardSection />
