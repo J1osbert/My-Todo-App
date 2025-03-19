@@ -107,7 +107,7 @@ export function TaskTracker() {
     <div className="grid grid-cols-4 gap-3 space-y-5 text-start">
       {taskCard.map((item) => {
         return (
-          <Card className="relative h-[100px] overflow-hidden py-2">
+          <Card className="relative h-[100px] overflow-hidden py-2 transform animate-bounce">
             <CardContent className="">
               <p
                 className="text-4xl font-bold "
